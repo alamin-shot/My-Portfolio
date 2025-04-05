@@ -1,103 +1,81 @@
-import Image from "next/image";
+import Image from 'next/image';
+// import img3 from './images/img3.png';
+import img1 from './images/img1.png';
+import { FiGithub, FiLinkedin, FiArrowRight, FiFacebook } from 'react-icons/fi';
+import Link from 'next/link';
+import { Footer } from './components/footer';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	return (
+		<>
+			<div className='home_layout'>
+				<div className='home_section'>
+					<div className='container'>
+						<div className='home_header'>
+							{/* Section 1: Text (staggered via CSS) */}
+							<div className='section1'>
+								<h1 data-text='AL AMIN'>AL AMIN</h1>
+								<h3>
+									Crafting digital experiences with{' '}
+									<span className='highlight'>JS & REACT</span>
+								</h3>
+								<p className='intro'>
+									frontend developer since 2024, turning ideas into sleek,
+									interactive experiences. Passionate about clean code,
+									intuitive design, and never-ending growth. Currently building
+									the web,{' '}
+									<span className='highlight'>one pixel at a time</span>.
+								</p>
+								<div className='cta_buttons'>
+									<div className='skill-tag'>HTML</div>
+									<div className='skill-tag'>CSS</div>
+									<div className='skill-tag'>JS</div>
+									<div className='skill-tag'>REACT</div>
+									<div className='skill-tag'>NEXTJS</div>
+								</div>
+								<div className='cta_buttons'>
+									<Link href='/projects' className='btn_primary'>
+										View my work <FiArrowRight />
+									</Link>
+									<Link href='/contact' className='btn_secondary'>
+										Say hello
+									</Link>
+								</div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+								<div className='social_links'>
+									<Link href='https://github.com/alamin-shot' target='_blank'>
+										<FiGithub />
+									</Link>
+									<Link
+										href='https://www.linkedin.com/in/al-amin-600a15209/'
+										target='_blank'
+									>
+										<FiLinkedin />
+									</Link>
+									<Link
+										href='https://www.facebook.com/rifat.rj'
+										target='_blank'
+									>
+										<FiFacebook />
+									</Link>
+								</div>
+							</div>
+
+							{/* Section 2: Image (slide-in via CSS) */}
+							<div className='section2'>
+								<Image
+									src={img1}
+									alt='Al Amin - Frontend Developer'
+									height={380}
+									className='hero_image'
+									priority
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<Footer />
+			</div>
+		</>
+	);
 }
