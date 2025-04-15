@@ -64,7 +64,7 @@ export default function Projects() {
 										</li>
 									))}
 									<li className='resume-item'>
-										<Link href='...' target='_blank'>
+										<Link href='https://drive.google.com/file/d/16h-DxTegm3e7eEU6ZxhlqrCckXveA7Yn/view?usp=sharing' target='_blank'>
 											<FiFileText className='resume-icon' />
 											View My Resume
 										</Link>
